@@ -1,20 +1,20 @@
 Prove: p -> q <=> q' -> p'
-One: p -> q to p' v q           *Implication*
+One: p -> q to p' v q ------------------------*Implication*
   p' v q <=> q' -> p'       
-Two: q' -> p' to q'' v p'       *Implication*
+Two: q' -> p' to q'' v p'---------------------*Implication*
   p' v q <=> q'' v p' 
-Three: q'' v p' to q v p'       *Double negation*
-  p' v q <=> q v p'             *Done*
+Three: q'' v p' to q v p'---------------------*Double negation*
+  p' v q <=> q v p'---------------------------*DONE*
 
 Prove: (p -> r) ^ (q -> r) <=> (p v q) -> r
-One: (p -> r) TO (p' v r)                     *Implication*
-Two: (q -> r) TO (q' v r)                     *Implication*
-(p v q) -> r TO (p v q)' v r                  *Implication*
+One: (p -> r) TO (p' v r)---------------------*Implication*
+Two: (q -> r) TO (q' v r)---------------------*Implication*
+(p v q) -> r TO (p v q)' v r------------------*Implication*
   (p' v r) ^ (q' v r) <=> (p v q)' v r
-Three: (p' v r) ^ (q' v r) TO (p' v q') ^ r   *Distributive*
+Three: (p' v r) ^ (q' v r) TO (p' v q') ^ r---*Distributive*
 (p' v q') ^ r <=> (p v q)' v r
-Four: (p' v q') ^ r TO (p v q)' ^ r           *De Morgan's Law*
-(p v q)' ^ r <=> (p v q)' v r                 *Done*
+Four: (p' v q') ^ r TO (p v q)' ^ r-----------*De Morgan's Law*
+(p v q)' ^ r <=> (p v q)' v r-----------------*DONE*
 
 Prove This is Invalid: (Ǝx)A(x) ^ (Ǝx)B(x) -> (Ǝx)(A(x) ^ B(x))
   x = people.
