@@ -1,5 +1,5 @@
-//Prove: p -> q <=> q' -> p'
-//One: p -> q to p' v q           *Implication*
+Prove: p -> q <=> q' -> p'
+One: p -> q to p' v q           *Implication*
   p' v q <=> q' -> p'       
 Two: q' -> p' to q'' v p'       *Implication*
   p' v q <=> q'' v p' 
