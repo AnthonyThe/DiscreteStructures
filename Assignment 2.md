@@ -1,6 +1,5 @@
-/*
-Prove: p -> q <=> q' -> p'
-One: p -> q to p' v q           *Implication*
+//Prove: p -> q <=> q' -> p'
+//One: p -> q to p' v q           *Implication*
   p' v q <=> q' -> p'       
 Two: q' -> p' to q'' v p'       *Implication*
   p' v q <=> q'' v p' 
@@ -24,4 +23,3 @@ Prove This is Invalid: (Ǝx)A(x) ^ (Ǝx)B(x) -> (Ǝx)(A(x) ^ B(x))
 Saying all the people who eat junk food, (Ǝx)A(x), and all the people who drink energy
 drinks, (Ǝx)B(x), all eat AND drink energy drinks, (Ǝx)(A(x) ^ B(x)), is wrong.  Because
 someone can drink energy drinks but not eat junk food, and vice versa.
-*/
