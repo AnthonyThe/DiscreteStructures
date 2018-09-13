@@ -18,4 +18,5 @@ If mathematics is easy, then the homework is done, and if it is sunny, then camp
 | T | F | F  | T  | F        | T       | F
 | F | T | T  | F  | T        | T       | T
 | F | F | T  | T  | T        | F       | T
+
 ```NEITHER```
