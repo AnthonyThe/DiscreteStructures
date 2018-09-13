@@ -1,6 +1,13 @@
 |PART ONE|
 |--------|
 
+```
+If mathematics is easy, then the homework is done, and if it is sunny, then camping is fun.
+
+(S ^ H) -> (M V C) 
+```
+|PART TWO|
+|--------|
 
 
 
