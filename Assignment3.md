@@ -39,7 +39,7 @@ p' v q' v r, p' v r v q'        *De Morgan's Law*
 (q v r ) → p, (q → p)∧(r → p)
 (q v r)' v p, (q' v p) ^ (r' v p) *IMPLICATION x3*
 (q' ^ r') v p, (q' v p) ^ (r' v p)    *De Morgan's Law*
-(p ^ q') ^ (p ^ r'), (q' v p) ^ (r' v p)  *DISTRIBUTIVE*
+(p v q') ^ (p v r'), (q' v p) ^ (r' v p)  *DISTRIBUTIVE*
 *Done*
 
 |PART FOUR|
