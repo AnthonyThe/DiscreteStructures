@@ -47,7 +47,7 @@ p' v q' v r, p' v r v q'        *De Morgan's Law*
 |---------|
 
 ```
-For some cities, all travelers love the city, but nobody who lives in the city loves it.
+all travelers love some cities, but all the people who live in those cities do not love it.
 ∀y∀x(Traveler(y)^City(x)^Lives(y, x)) -> ¬Loves(y, x)
 ```
 
