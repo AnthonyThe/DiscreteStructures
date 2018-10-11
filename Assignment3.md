@@ -41,6 +41,7 @@ p' v q' v r, p' v r v q'        *De Morgan's Law*
 (q' ^ r') v p, (q' v p) ^ (r' v p)    *De Morgan's Law*
 (p v q') ^ (p v r'), (q' v p) ^ (r' v p)  *DISTRIBUTIVE*
 *Done*
+```
 
 |PART FOUR|
 |---------|
