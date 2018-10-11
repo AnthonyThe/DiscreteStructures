@@ -1,6 +1,5 @@
 /*
 Anthony The
-8-29-2018
 Discrete Structures
 Mr. Wilson
 */
@@ -14,24 +13,24 @@ int main()
 	bool newWFF = true;
 	string input;
 	string connectors = "V^v";
-	string alphabet = "ABCDEFGHIJKLMNOPQRSTUWXYZabcdefghijklmnopqrstuwxyz"; // excludes v altogether
-	string answer = "ok";
-
+	string alphabet = "ABCDEFGHIJKLMNOPQRSTUWXYZabcdefghijklmnopqrstuwxyz"; // excludes v because v is a connector
+	string answer;
 
 	while (newWFF == true)
 	{
-	bool isAlpha = false;	//I declare these bools inside the while loop because if the user wants to
-	bool isConnector = false;//go through the program again, the variables have to be reset to false.
-	bool lastWasNot = false;
-	bool fail = false;//if the program detects an invalid WFF, the fail variable has to be reset to false to test another WFF. 
+		bool isAlpha = false;	//I declare these bools inside the while loop because if the user wants to
+		bool isConnector = false;//go through the program again, the variables have to be reset to false.
+		bool lastWasNot = false;
+		bool fail = false;//if the program detects an invalid WFF, the fail variable has to be reset to false to test another WFF. 
+		bool lastWasDash = false;
 
-	cout << "Please enter a valid WFF: ";
-	getline(cin, input);
-	cout << endl;
+		cout << "Please enter a valid WFF: ";
+		getline(cin, input);
+		cout << endl;
 
 		for (char c : input)
 		{
-			if (c == ' ')
+			if (c == ' ' || c == '(' || c == ')')
 				continue;
 			if (connectors.find(c) != string::npos && isAlpha == true)
 			{
@@ -51,33 +50,46 @@ int main()
 				isAlpha = false;
 				isConnector = false;
 			}
+			else if (c == '-' && isAlpha == true)
+			{
+				lastWasDash = true;
+				isAlpha = false;
+				lastWasNot = false;
+			}
+			else if (c == '>' && lastWasDash == true)
+			{
+				lastWasDash = false;
+				continue;
+			}
 			else
 			{
 				fail = true;
-				cout << "Not a valid WFF" << endl;
 				break;
 			}
 
 		}
-		if (fail == false)
-		{
+		if (fail == false && isAlpha == true)	//the mess above only checks to see if the WFF is valid up to the point c is at.  isAlpha here will
+		{										//make sure the WFF ended with a letter.  Otherwise it will be invalid. 
 			cout << "This WFF checks out e.e" << endl;
-
 		}
-		
+		else
+		{
+			cout << "Not a valid WFF" << endl;
+		}
+
 		//If the user wants to try another WFF
 		cout << "Would you like to try another WFF? (y or n) ";
 		cin >> answer;
-		cin.ignore();//the getline will screw up if this white space isn't taken care of.
-		if (answer != "N" && answer != "Y" && answer != "n" && answer != "y") // I had this much simpler with chars and toupper, but the program
-		{									//wasn't working and I thought it might be because of this section. . . It wasn't 
-			while (answer != "N" && answer != "Y" && answer != "n" && answer != "y")//So now I have 4 different cases for answer ;)					
+		cin.ignore();	//for the getline
+		if (answer != "N" && answer != "Y" && answer != "n" && answer != "y") 
+		{
+			while (answer != "N" && answer != "Y" && answer != "n" && answer != "y")		
 			{
+				system("cls");
 				cout << "Invalid answer >:( " << endl;
-				cout << "Please enter either n or y for yes or no. " << endl;
+				cout << "Please enter either 'n' for no or 'y' for yes. ";
 				cin >> answer;
 				cin.ignore();
-				system("cls");
 			}
 		}
 		if (answer == "Y" || answer == "y")
