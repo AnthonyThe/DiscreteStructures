@@ -19,8 +19,8 @@ Four: (p' v q') ^ r TO (p v q)' ^ r-----------*De Morgan's Law*
 
 Prove This is Invalid: (Ǝx)A(x) ^ (Ǝx)B(x) -> (Ǝx)(A(x) ^ B(x))
   x = people.
-  A(x) = eat junk food
-  B(x) = drink energy drinks 
+  A(x) = people who eat junk food
+  B(x) = people who drink energy drinks 
 Saying all the people who eat junk food, (Ǝx)A(x), and all the people who drink energy
 drinks, (Ǝx)B(x), all eat AND drink energy drinks, (Ǝx)(A(x) ^ B(x)), is wrong.  Because
 someone can drink energy drinks but not eat junk food, and vice versa.
