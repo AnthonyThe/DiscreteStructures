@@ -12,10 +12,9 @@ int main()
 	int num2;
 	bool redo = true;
 	char answer;
-	
+
 	while (redo == true)
 	{
-
 		cout << "Enter two integers and I will calculate their"
 			<< " greatest common denominator";
 		cout << endl << "Number 1: ";
@@ -38,20 +37,29 @@ int main()
 
 		GCD = findGCD(num1, num2);
 		cout << "The greatest common denomenator is: " << GCD << endl << endl;
-		
+
 		chrono::high_resolution_clock::time_point time2 = chrono::high_resolution_clock::now();
 		chrono::duration<double> time_span = chrono::duration_cast<chrono::duration<double>>(time2 - time1);
 		cout << "The program took " << time_span.count() << " seconds long" << endl << endl;
 
 		cout << "Would you like to try different numbers?('y' for yes, 'n' for no) ";
 		cin >> answer;
-		if (answer == 'n')
+		while (toupper(answer) != 'Y' && toupper(answer) != 'N')
+		{
+			system("cls");
+			cout << "Please enter either 'y' for yes or 'n' for no: ";
+			cin >> answer;
+		}
+		if (toupper(answer) == 'N')
 		{
 			redo = false;
 		}
+		else if (toupper(answer) == 'Y')
+		{
+			redo = true;
+		}
 		system("cls");
 	}
-
 	return 0;
 }
 
